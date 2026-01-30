@@ -83,7 +83,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
                 <div className="flex justify-between items-center">
                   <h4 className="font-semibold text-sm">Basic</h4>
                   <div className="text-right">
-                    <span className="text-lg font-bold">29,000원</span>
+                    <span className="text-lg font-bold">$20.21</span>
                     <span className="text-xs text-muted-foreground">/월</span>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
                 <div className="flex justify-between items-center">
                   <h4 className="font-semibold text-sm">Standard</h4>
                   <div className="text-right">
-                    <span className="text-lg font-bold">59,000원</span>
+                    <span className="text-lg font-bold">$41.12</span>
                     <span className="text-xs text-muted-foreground">/월</span>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
                 <div className="flex justify-between items-center">
                   <h4 className="font-semibold text-sm">Unlimited</h4>
                   <div className="text-right">
-                    <span className="text-lg font-bold">79,000원</span>
+                    <span className="text-lg font-bold">$55.06</span>
                     <span className="text-xs text-muted-foreground">/월</span>
                   </div>
                 </div>
