@@ -43,7 +43,7 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: "plan-optimization",
     name: "Sales Optimization Package",
-    price: "$6,000",
+    price: "$600",
     period: "per project",
     description: "Complete sales optimization solution",
     features: [
@@ -57,13 +57,13 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: "plan-keyword-analysis",
     name: "Ad Keyword Analysis",
-    price: "$220 ~ $590",
+    price: "$20.21 ~ $55.06",
     period: "per month",
     description: "Keyword analysis service tailored to your business scale",
     features: [
-      "Basic: $220/month - 3 keyword analyses per day",
-      "Standard: $440/month - 30 keyword analyses per day",
-      "Unlimited: $590/month - Unlimited usage",
+      "Basic: $20.21/month - 3 keyword analyses per day",
+      "Standard: $41.12/month - 30 keyword analyses per day",
+      "Unlimited: $55.06/month - Unlimited usage",
     ],
     isPopular: true,
     ctaText: "Get Started",
@@ -71,11 +71,11 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: "plan-expert",
     name: "Expert Add-on Services",
-    price: "$1,900",
+    price: "$174,14",
     period: "per month",
     description: "Advanced marketing and global expansion services",
     features: [
-      "Semantic Markup: $1,900/month per category",
+      "Semantic Markup: $174.14/month per category",
       "Global Expansion Pack: Country-specific packages",
     ],
     ctaText: "Buy Now",
