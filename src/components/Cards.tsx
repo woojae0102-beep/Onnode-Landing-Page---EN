@@ -111,11 +111,20 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
             </>
           )}
         </CardContent>
-
         <CardFooter className="pt-6">
   <Button 
     className="w-full font-semibold transition-all duration-200 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md"
     size="lg"
+    onClick={() => {
+      // 각 플랜별 URL 연결
+      if (plan.id === 'plan-optimization') {
+        window.location.href = 'https://ai365mall.cafe24.com/surl/O/25';
+      } else if (plan.id === 'plan-keyword-analysis') {
+        window.location.href = 'https://your-payment-url.com/subscribe/20';
+      } else if (plan.id === 'plan-expert') {
+        window.location.href = 'https://your-payment-url.com/checkout/174';
+      }
+    }}
   >
     {plan.ctaText}
   </Button>
