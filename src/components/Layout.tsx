@@ -11,10 +11,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { label: "기능 소개", href: "#features" },
-  { label: "도입 효과", href: "#benefits" },
-  { label: "추천 대상", href: "#target" },
-  { label: "요금제", href: "#pricing" },
+  { label: "features", href: "#features" },
+  { label: "benefits", href: "#benefits" },
+  { label: "who we serve", href: "#target" },
+  { label: "pricing", href: "#pricing" },
 ];
 
 export function Header({ className }: { className?: string }) {
@@ -73,10 +73,10 @@ export function Header({ className }: { className?: string }) {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" size="sm" className="text-sm font-medium">
-              로그인
+              Login
             </Button>
             <Button size="sm" className="gap-2 shadow-sm">
-              지금 시작하기
+              Get Stared
               <ArrowRight className="w-4 h-4" />
             </Button>
           </div>
@@ -115,10 +115,10 @@ export function Header({ className }: { className?: string }) {
               <hr className="border-border" />
               <div className="flex flex-col gap-3">
                 <Button variant="outline" className="w-full justify-center">
-                  로그인
+                  Login
                 </Button>
                 <Button className="w-full justify-center gap-2">
-                  지금 시작하기
+                  Get Started
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </div>
