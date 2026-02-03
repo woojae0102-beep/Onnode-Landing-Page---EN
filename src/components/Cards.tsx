@@ -71,53 +71,26 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
         </CardHeader>
 
         <CardContent className="flex-1 space-y-6">
-          {plan.id === 'plan-keyword-analysis' ? (
-            // 광고 키워드 분석 플랜의 경우 다른 레이아웃
-            <div className="space-y-4">
-              <div className="text-center text-sm text-muted-foreground mb-4">
-                비즈니스 규모에 맞는 플랜을 선택하세요
-              </div>
-              
-              {/* Basic 플랜 */}
-              <div className="border rounded-lg p-4 space-y-3">
-                <div className="flex justify-between items-center">
-                  <h4 className="font-semibold text-sm">Basic</h4>
-                  <div className="text-right">
-                    <span className="text-lg font-bold">$20.21</span>
-                    <span className="text-xs text-muted-foreground">/월</span>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground">하루 3건 키워드 분석</p>
-                <Button size="sm" className="w-full">구매하기</Button>
-              </div>
-              
-              {/* Standard 플랜 */}
-              <div className="border rounded-lg p-4 space-y-3 border-primary/50 bg-primary/5">
-                <div className="flex justify-between items-center">
-                  <h4 className="font-semibold text-sm">Standard</h4>
-                  <div className="text-right">
-                    <span className="text-lg font-bold">$41.12</span>
-                    <span className="text-xs text-muted-foreground">/월</span>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground">하루 30건 키워드 분석</p>
-                <Button size="sm" className="w-full">구매하기</Button>
-              </div>
-              
-              {/* Unlimited 플랜 */}
-              <div className="border rounded-lg p-4 space-y-3">
-                <div className="flex justify-between items-center">
-                  <h4 className="font-semibold text-sm">Unlimited</h4>
-                  <div className="text-right">
-                    <span className="text-lg font-bold">$55.06</span>
-                    <span className="text-xs text-muted-foreground">/월</span>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground">무제한 이용 가능</p>
-                <Button size="sm" className="w-full">구매하기</Button>
-              </div>
-            </div>
-          ) : (
+        {plan.id === 'plan-keyword-analysis' ? (
+  // 다른 플랜과 동일한 레이아웃 사용
+  <>
+    <div className="flex items-baseline gap-1">
+      <span className="text-3xl font-bold tracking-tighter text-foreground">{plan.price}</span>
+      {plan.period && <span className="text-sm text-muted-foreground">/{plan.period}</span>}
+    </div>
+
+    <div className="space-y-3">
+      {plan.features.map((feature, idx) => (
+        <div key={idx} className="flex items-start gap-3">
+          <div className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <Check size={10} strokeWidth={3} />
+          </div>
+          <span className="text-sm text-foreground/80 leading-snug">{feature}</span>
+        </div>
+      ))}
+    </div>
+  </>
+) : (
             // 기존 레이아웃
             <>
               <div className="flex items-baseline gap-1">
@@ -139,16 +112,14 @@ export function PricingCard({ plan }: { plan: PricingPlan }) {
           )}
         </CardContent>
 
-        {plan.id !== 'plan-keyword-analysis' && (
-          <CardFooter className="pt-6">
-            <Button 
-              className="w-full font-semibold transition-all duration-200 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md"
-              size="lg"
-            >
-              {plan.ctaText}
-            </Button>
-          </CardFooter>
-        )}
+        <CardFooter className="pt-6">
+  <Button 
+    className="w-full font-semibold transition-all duration-200 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md"
+    size="lg"
+  >
+    {plan.ctaText}
+  </Button>
+</CardFooter>
       </Card>
     </motion.div>
   );

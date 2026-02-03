@@ -57,16 +57,18 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: "plan-keyword-analysis",
     name: "Ad Keyword Analysis",
-    price: "$20.21 ~ $55.06",
+    price: "$20.21",  // ← 이것만 수정
     period: "per month",
-    description: "Keyword analysis service tailored to your business scale",
-    features: [
-      "Basic: $20.21/month - 3 keyword analyses per day",
-      "Standard: $41.12/month - 30 keyword analyses per day",
-      "Unlimited: $55.06/month - Unlimited usage",
+    description: "Unlimited keyword analysis service",  // ← 이것만 수정
+    features: [  // ← 이 배열 전체 교체
+      "Unlimited keyword searches",
+      "Google + Naver + Yahoo Japan",
+      "Top 100 keywords per search",
+      "24-hour smart caching",
+      "Real-time competition analysis",
     ],
     isPopular: true,
-    ctaText: "Get Started",
+    ctaText: "Buy Now",  // ← 버튼 텍스트 수정 (선택)
   },
   {
     id: "plan-expert",
