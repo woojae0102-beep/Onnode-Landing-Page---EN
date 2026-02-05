@@ -304,15 +304,36 @@ export default function Home() {
       </section>
 
       <footer className="py-12 border-t border-border bg-background">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p className="text-sm font-medium mb-4">© 2026 OnNode. All rights reserved.</p>
-          <div className="flex justify-center gap-8 text-xs">
-            <a href="#" className="hover:text-foreground transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Support</a>
-          </div>
-        </div>
-      </footer>
+  <div className="container mx-auto px-4 text-center text-muted-foreground">
+    <p className="text-sm font-medium mb-4">© 2026 OnNode. All rights reserved.</p>
+    <div className="flex justify-center gap-8 text-xs">
+      <a 
+        href="https://ai365-onnode.netlify.app/terms.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-foreground transition-colors"
+      >
+        Terms of Service
+      </a>
+      <a 
+        href="https://ai365-onnode.netlify.app/privacy.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-foreground transition-colors"
+      >
+        Privacy Policy
+      </a>
+      <a 
+        href="https://ai365-onnode.netlify.app/refund.html"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-foreground transition-colors"
+      >
+        Refund Policy
+      </a>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
